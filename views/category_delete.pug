@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 #{title}: #{category.name}
+  p Do you really want to delete this category?
+
+  form(method='POST' action='')
+    div
+      input(type='hidden',name='categoryid', required='true', value=category._id )
+
+    button(type='submit') Delete
+      
+      

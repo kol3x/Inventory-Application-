@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each hotel in hotel_list
+      li
+        a(href=hotel.url) #{hotel.name}
+        h3= hotel.price_per_night + "$"
+        a(href=hotel.category.url) #{"Vibe: " + hotel.category.name}
+        h3= hotel.free_rooms + " rooms left"
+    else
+      li There are no hotels.

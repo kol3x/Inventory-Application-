@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 #{title}: #{hotel.title}
+  p Do you really want to delete this hotel?
+
+  form(method='POST' action='')
+    div
+      input(type='hidden',name='hotelid', required='true', value=hotel._id )
+
+    button(type='submit') Delete
+      
+      
